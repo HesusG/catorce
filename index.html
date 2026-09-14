@@ -103,35 +103,7 @@ body{
 .note p{max-width:100%;overflow-wrap:break-word;}
 .note b{color:var(--ink);font-weight:500;}
 
-/* ---------- VERSION TOGGLE ---------- */
-.switch{
-  display:flex;
-  gap:0;
-  margin-top:24px;
-  border:1px solid var(--rule);
-  width:fit-content;
-  max-width:100%;
-}
-.switch button{
-  font-family:var(--mono);
-  font-size:0.68rem;
-  letter-spacing:0.1em;
-  text-transform:uppercase;
-  color:var(--slate);
-  background:none;
-  border:none;
-  padding:9px 14px;
-  cursor:pointer;
-  -webkit-tap-highlight-color:transparent;
-}
-.switch button + button{border-left:1px solid var(--rule);}
-.switch button[aria-pressed="true"]{background:var(--oxide);color:var(--paper);}
-.switch button:focus-visible{outline:2px solid var(--oxide);outline-offset:2px;}
-.prose p + p{margin-top:1.15em;}
 .verse p + p{margin-top:1.5em;}
-.lit{display:none;}
-.poem.show-lit .prose{display:none;}
-.poem.show-lit .lit{display:block;}
 
 @media(min-width:44rem){
   body{font-size:18px;}
@@ -152,17 +124,14 @@ body{
     <div class="note">
       <p><b>Marvin Gaye</b>, Motown's "Prince of Soul," known for <i>What's Going On</i> and <i>Mercy Mercy Me</i>. His father, a Pentecostal minister, was violent and distant throughout his life. His father shot and killed him during an argument. Gay Sr. was later found to have a brain tumor.</p>
     </div>
-    <div class="switch">
-      <button type="button" aria-pressed="true" onclick="setVersion(this,false)">Poem</button>
-      <button type="button" aria-pressed="false" onclick="setVersion(this,true)">Literal</button>
-    </div>
-    <div class="body prose verse">
+    <div class="body verse">
       <p>Marvin sang with both hands open.<br>He gave it all away to the same world<br>that was already coming for him.<br>I can't do that. My hands don't open like that.</p>
       <p>I learned them at a table.<br>Sundays, the long one, the dishes going around<br>and not once passing from a hand into a hand.<br>We set things down in front of each other<br>and stepped back and let the other one reach.<br>Nobody in that house ever gave anybody anything.<br>That is where the hands get their instructions.<br>Nothing was ever put in mine,<br>so they learned to stay shut. They are still shut.<br>I am telling you this with them closed.</p>
       <p>And my father weighs nothing at all,<br>and I have carried him up every staircase of my life.<br>He is the song I know every word of<br>and cannot play in a room with people in it.</p>
       <p>There were nights I built a better man out of him.<br>Gave him a voice that came in warm.<br>Gave him hands that knew the difference<br>between holding a boy<br>and holding a boy under.</p>
       <p>Marvin's father never learned it either.<br>Two men who could not tell the two apart.<br>Two sons who found out which was which.</p>
-      <p>Call it settled. Call it paid.<br>There was no last word between us.<br>There was a receiver, the tone going on and on,<br>and that exact hush before a man hangs up.<br>Then the line went slack the way it goes slack<br>between a ship and the one who walked out of it,<br>and neither of us has known since<br>whether the other is still turning out there<br>or has been falling a long time in the dark.</p>
+      <p>Marvin's ended loud, in a room, at close range.<br>Mine ended on a Tuesday, on the telephone,<br>and nobody would call it an ending.<br>He said the thing he always said.<br>I heard myself not answering.<br>And then I did the only violent thing<br>I have ever done to him: I stopped calling.<br>No announcement. No last word.<br>I let the silence in and I kept it fed.<br>Years of it now. I am the one who did that.</p>
+      <p>So call it settled. Call it paid.<br>What I have instead of a father<br>is a receiver, the tone going on and on,<br>and that exact hush before a man hangs up.<br>After that the line went slack the way it goes slack<br>between a ship and the one who walked out of it,<br>and neither of us has known since<br>whether the other is still turning out there<br>or has been falling a long time in the dark.</p>
       <p>I lived inside that hush for years.<br>Kept the hate where you keep good silver.<br>Kept the loneliness turning, slow,<br>a record nobody dropped the needle on<br>that plays regardless. Some nights<br>the two of them lay down together<br>in the house where my mother was learning<br>to sleep on one half of a bed<br>and leave the other half made.</p>
       <p>And I cursed him. Thoroughly. For years.<br>With all the rage one house can hold<br>without the windows going.</p>
       <p>Then: they opened Marvin's father's head<br>and found a nameless thing<br>that had been growing there the whole time.<br>It forgave him nothing.<br>But it gave the living somewhere to lay the blame.</p>
@@ -175,23 +144,6 @@ body{
       <p>But listen. I want. God, I want.<br>I want to come out the other side of this<br>enormous. Not loud. Enormous.<br>I want to be a big man in the one way that counts,<br>the way Marvin is big for three minutes<br>in <i>Mercy Mercy Me</i>,<br>grieving the whole ruined world<br>with his hands open, holding nothing back,<br>giving it away to people who never once<br>passed anything from a hand into a hand.</p>
       <p>I want to be the first one in this house<br>who knows the difference between holding<br>and holding under, and knows it in the hands,<br>not in the head, so my hands do it without asking.</p>
       <p>I am not there. I am nowhere near there.<br>I put the needle on <i>Mercy Mercy Me</i><br>and the crying does itself,<br>and somewhere under the crying<br>a small man is getting his growth.</p>
-    </div>
-    <div class="body lit">
-      <p>I want to hand you my heart open-palmed<br>and ask nothing back,<br>the way Marvin sang to the world that was killing him.</p>
-      <p>But I carry things.</p>
-      <p>My father weighs something you can't see,<br>like a song you know by heart<br>and can't play at a party.</p>
-      <p>I put him away in the quiet of Sundays,<br>at the table where nobody handed anybody anything.</p>
-      <p>I used to imagine a time<br>when his voice didn't come in cold,<br>when a father's hands knew the difference<br>between holding you and holding you under.</p>
-      <p>Marvin's father's hands didn't know it either.</p>
-      <p>So we're even.<br>That's all.<br>Like two astronauts who lost the line<br>and can't tell anymore if the other one is still out there<br>or has been drifting alone in the dark for years.</p>
-      <p>There was no goodbye.<br>There was a phone, the long tone in it,<br>that exact silence before you hang up.</p>
-      <p>I stayed in that silence a long time,<br>with the hate put away somewhere safe,<br>with the loneliness going around slow<br>like a record nobody put on that plays anyway,<br>and then the two of them together,<br>asleep in a house where my mother<br>taught herself to sleep in half a bed.</p>
-      <p>I cursed him.<br>Thoroughly,<br>with every bit of rage that fits inside one house.</p>
-      <p>They found something growing nameless<br>in Marvin's father's head.<br>It didn't let him off, but at least there was something to point at.</p>
-      <p>Some days I want that for mine,<br>something growing nameless in the dark,<br>something that accounts for the Sundays he missed,<br>for a whole house teaching itself not to wait up.</p>
-      <p>Something that eats whatever it finds,<br>that goes without a map, that can't tell well from sick,<br>that eats the part of him that hurt me<br>and leaves the other part standing,<br>the one who pushed toy cars across the floor,<br>the one who sang about the woodpecker<br>crying because he came home broke,<br>the father who was there<br>before something moved in behind his eyes<br>that wasn't all the way him.</p>
-      <p>Something nameless that lets us both go.</p>
-      <p>I'm not Marvin,<br>but I play <i>Mercy Mercy Me</i><br>and I cry.</p>
     </div>
   </div>
 </article>
@@ -228,16 +180,6 @@ body{
     </div>
   </div>
 </article>
-
-<script>
-function setVersion(btn,literal){
-  var poem=btn.closest('.poem');
-  poem.classList.toggle('show-lit',literal);
-  var btns=poem.querySelectorAll('.switch button');
-  btns[0].setAttribute('aria-pressed',String(!literal));
-  btns[1].setAttribute('aria-pressed',String(literal));
-}
-</script>
 
 </body>
 </html>
