@@ -128,6 +128,7 @@ body{
 .switch button[aria-pressed="true"]{background:var(--oxide);color:var(--paper);}
 .switch button:focus-visible{outline:2px solid var(--oxide);outline-offset:2px;}
 .prose p + p{margin-top:1.15em;}
+.verse p + p{margin-top:1.5em;}
 .lit{display:none;}
 .poem.show-lit .prose{display:none;}
 .poem.show-lit .lit{display:block;}
@@ -152,18 +153,23 @@ body{
       <p><b>Marvin Gaye</b>, Motown's "Prince of Soul," known for <i>What's Going On</i> and <i>Mercy Mercy Me</i>. His father, a Pentecostal minister, was violent and distant throughout his life. His father shot and killed him during an argument. Gay Sr. was later found to have a brain tumor.</p>
     </div>
     <div class="switch">
-      <button type="button" aria-pressed="true" onclick="setVersion(this,false)">Prose</button>
+      <button type="button" aria-pressed="true" onclick="setVersion(this,false)">Poem</button>
       <button type="button" aria-pressed="false" onclick="setVersion(this,true)">Literal</button>
     </div>
-    <div class="body prose">
-      <p>I want to hand you my heart open-palmed and ask nothing back, the way Marvin sang to the world that was killing him. But I can't. I carry things.</p>
-      <p>My father weighs something you can't see. He's a song I know every word of and can't play at a party. So I kept him in the quiet of Sundays, at a table where nobody ever handed anybody anything.</p>
-      <p>I used to invent a version of him whose voice didn't come in cold, whose hands knew the difference between holding you and holding you under. Marvin's father's hands didn't know it either. That's the whole inheritance: two men who never learned the difference, and the two of us who found out.</p>
-      <p>So we're square. There was no goodbye — there was a phone, the long tone in it, that exact silence before somebody hangs up. After that, two astronauts who lost the line, neither one sure the other is still out there or has been drifting alone in the dark for years.</p>
-      <p>I stayed in that silence a long time, the hate put away somewhere safe, the loneliness turning slow like a record nobody put on that plays anyway, and eventually the two of them lay down together in a house where my mother taught herself to sleep in half a bed. I cursed him. For years, thoroughly, with every bit of rage one house can hold.</p>
-      <p>They found something growing nameless in Marvin's father's head. It didn't let him off, but at least there was something to point at. Some days I want that for mine — something growing nameless in the dark, something that would account for the Sundays he missed, the Christmases where the work showed up on time and he didn't, a whole house teaching itself not to wait up. Something that eats whatever it finds, that goes without a map, that can't tell well from sick. Let it eat the part of him that hurt me and leave the other part standing: the one who pushed toy cars across the floor, the one who sang about the woodpecker who cried because he came home broke, the father who was there before something moved in behind his eyes that wasn't all the way him.</p>
-      <p>Something nameless that lets us both go.</p>
-      <p>I'm not Marvin. But I play <i>Mercy Mercy Me</i> and I cry.</p>
+    <div class="body prose verse">
+      <p>Marvin gave it away with both hands open,<br>gave it to the world that was already<br>loading the gun. I can't do that.<br>My hands close. I was taught that.</p>
+      <p>My father has no weight and I have carried him<br>up every set of stairs I own.<br>He is the song I know all the words to<br>and cannot play in a room with people in it.</p>
+      <p>So I filed him under Sunday.<br>Under the long table, the dishes<br>that crossed it without ever passing<br>from one hand into another hand.<br>Nobody in that house gave anybody anything.<br>We set it down and stepped back.</p>
+      <p>There were nights I built a better man out of him.<br>Gave him a voice that came in warm.<br>Gave him hands that knew the difference<br>between holding a boy<br>and holding a boy under.</p>
+      <p>Marvin's father never learned it either.<br>Two men who could not tell the two apart.<br>Two sons who found out which was which.</p>
+      <p>Call it settled. Call it paid.<br>There was no last word between us —<br>there was a receiver, the tone going on and on,<br>and that exact hush before a man hangs up.<br>Then the line went slack the way it goes slack<br>between a ship and the one who walked out of it,<br>and neither of us has known since<br>whether the other is still turning out there<br>or has been falling a long time in the dark.</p>
+      <p>I lived inside that hush for years.<br>Kept the hate where you keep good silver.<br>Kept the loneliness turning, slow,<br>a record nobody dropped the needle on<br>that plays regardless. Some nights<br>the two of them lay down together<br>in the house where my mother was learning<br>to sleep on one half of a bed<br>and leave the other half made.</p>
+      <p>And I cursed him. Thoroughly. For years.<br>With all the rage one house can hold<br>without the windows going.</p>
+      <p>Then: they opened Marvin's father's head<br>and found a nameless thing<br>that had been growing there the whole time.<br>It forgave him nothing.<br>But it gave the living something to point at.</p>
+      <p>God help me, I want that for mine.<br>I want a nameless thing to bloom in the dark of him.<br>I want it to account for the Sundays.<br>For the Decembers when the overtime came home on time<br>and he did not.<br>For a whole house teaching itself, room by room,<br>not to listen for a car.</p>
+      <p>Let it be hungry. Let it go without a map.<br>Let it be too stupid to tell the good tissue from the bad —<br>no. Let it be smart.<br>Let it eat only the part of him that reached me,<br>and let it leave the man on the floor<br>running a toy car along the carpet,<br>let it leave the one who sang me the woodpecker<br>who wept because he came home with empty pockets,<br>let it leave whoever he was<br>before the thing moved in behind his eyes<br>and started wearing him.</p>
+      <p>Something nameless. Something that lets us both put it down.</p>
+      <p>I am not Marvin.<br>I put the needle on <i>Mercy Mercy Me</i><br>and the crying does itself.</p>
     </div>
     <div class="body lit">
       <p>I want to hand you my heart open-palmed<br>and ask nothing back,<br>the way Marvin sang to the world that was killing him.</p>
