@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Breathe, Come Back</title>
-<meta name="description" content="Three poems by El Zhurdo.">
+<title>Poem for Marvin</title>
+<meta name="description" content="Three poems.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -33,39 +33,9 @@ body{
 }
 .wrap{max-width:38rem;margin:0 auto;padding-inline:20px;}
 
-/* ---------- MASTHEAD ---------- */
-.masthead{padding-block:56px 40px;border-bottom:1px solid var(--rule);}
-.stamp{
-  font-family:var(--mono);
-  font-size:11px;
-  letter-spacing:0.1em;
-  text-transform:uppercase;
-  color:var(--slate);
-  display:flex;
-  flex-wrap:wrap;
-  gap:6px 14px;
-  margin-bottom:32px;
-}
-.stamp b{color:var(--oxide);font-weight:500;}
-.masthead h1{
-  font-family:var(--display);
-  font-weight:700;
-  font-size:clamp(2.6rem,11vw,4.2rem);
-  line-height:0.98;
-  letter-spacing:-0.02em;
-  text-wrap:balance;
-  margin-bottom:20px;
-}
-.deck{
-  font-size:1.12rem;
-  font-style:italic;
-  color:var(--slate);
-  line-height:1.6;
-  max-width:min(32ch,100%);
-}
-
 /* ---------- POEM ---------- */
 .poem{padding-block:52px;border-bottom:1px solid var(--rule);}
+.poem--first{padding-block:64px 52px;}
 .poem h2{
   font-family:var(--display);
   font-weight:600;
@@ -132,31 +102,10 @@ body{
 }
 .note b{color:var(--ink);font-weight:500;}
 
-/* ---------- COLOPHON ---------- */
-.colophon{padding-block:52px 72px;}
-.colophon blockquote{
-  font-size:1.3rem;
-  font-style:italic;
-  line-height:1.5;
-  max-width:min(28ch,100%);
-  text-wrap:balance;
-}
-.colophon blockquote span{color:var(--oxide);}
-.sig{
-  font-family:var(--mono);
-  font-size:0.72rem;
-  letter-spacing:0.12em;
-  text-transform:uppercase;
-  color:var(--slate);
-  border-top:1px solid var(--rule);
-  margin-top:28px;
-  padding-top:18px;
-}
-
 @media(min-width:44rem){
   body{font-size:18px;}
-  .masthead{padding-block:84px 52px;}
   .poem{padding-block:68px;}
+  .poem--first{padding-block:88px 68px;}
   .body{font-size:1.1rem;}
 }
 @media(prefers-reduced-motion:reduce){
@@ -166,36 +115,28 @@ body{
 </head>
 <body>
 
-<header class="masthead">
-  <div class="wrap">
-    <div class="stamp"><span>Puebla, Mexico</span><span>·</span><span>El Zhurdo</span><span>·</span><span><b>Three poems</b></span></div>
-    <h1>Breathe, Come Back</h1>
-    <p class="deck">What hurts has a name now. It keeps a place. It has somebody to blame, and blaming him fixes nothing.</p>
-  </div>
-</header>
-
-<article class="poem">
+<article class="poem poem--first">
   <div class="wrap">
     <h2>Poem for Marvin<span class="orig">Mercy Mercy Me</span></h2>
     <div class="note">
       <p><b>Marvin Gaye</b>, Motown's "Prince of Soul," known for <i>What's Going On</i> and <i>Mercy Mercy Me</i>. His father, a Pentecostal minister, was violent and distant throughout his life. His father shot and killed him during an argument. Gay Sr. was later found to have a brain tumor.</p>
     </div>
     <div class="body">
-      <p>I'd want to offer you my heart with an open hand<br>wanting nothing back,<br>the way Marvin sang to the world that was destroying him.</p>
+      <p>I want to hand you my heart open-palmed<br>and ask nothing back,<br>the way Marvin sang to the world that was killing him.</p>
       <p>But I carry things.</p>
-      <p>My father weighs in a way you can't see,<br>like a song you know<br>but can't play at any party.</p>
-      <p>I hid him in the silence of Sundays,<br>at the table where no one passed anything hand to hand.</p>
-      <p>There was an imagined time<br>where his voice didn't arrive cold,<br>where the father's hands knew the difference<br>between holding and drowning.</p>
+      <p>My father weighs something you can't see,<br>like a song you know by heart<br>and can't play at a party.</p>
+      <p>I put him away in the quiet of Sundays,<br>at the table where nobody handed anybody anything.</p>
+      <p>I used to imagine a time<br>when his voice didn't come in cold,<br>when a father's hands knew the difference<br>between holding you and holding you under.</p>
       <p>Marvin's father's hands didn't know it either.</p>
-      <p>So we're even.<br>That's all.<br>Like astronauts who lost the line<br>and no longer know if the other is still there<br>or has spent years drifting alone in the dark.</p>
-      <p>There was no goodbye.<br>There was a telephone, its long dial tone,<br>the exact silence before hanging up.</p>
-      <p>I stayed in that silence a long time,<br>with the hatred well kept,<br>with the loneliness turning slowly<br>like a record no one put on but that plays anyway,<br>and then both things together<br>sleeping in a house where my mother<br>learned to sleep in half a bed.</p>
-      <p>I cursed him.<br>In detail,<br>with all the rage that fits in that same house.</p>
-      <p>They found something growing nameless<br>in Marvin's father's head.<br>That didn't absolve him, but there was something to point to.</p>
-      <p>Sometimes I wish that for mine,<br>something that grows nameless in the dark,<br>that explains the Sundays without him,<br>the whole house learning not to wait for him.</p>
-      <p>Something that eats whatever it finds,<br>that moves without a map, that can't tell healthy from sick,<br>that eats what hurt me<br>and leaves the other one intact,<br>the one who pushed toy cars along the floor,<br>the one who sang about the woodpecker<br>who cried because he brought no money,<br>the father who existed<br>before something came to live inside him<br>that wasn't entirely him.</p>
-      <p>Something nameless that frees us both.</p>
-      <p>I'm not Marvin,<br>but I put on <i>Mercy Mercy Me</i><br>and I cry.</p>
+      <p>So we're even.<br>That's all.<br>Like two astronauts who lost the line<br>and can't tell anymore if the other one is still out there<br>or has been drifting alone in the dark for years.</p>
+      <p>There was no goodbye.<br>There was a phone, the long tone in it,<br>that exact silence before you hang up.</p>
+      <p>I stayed in that silence a long time,<br>with the hate put away somewhere safe,<br>with the loneliness going around slow<br>like a record nobody put on that plays anyway,<br>and then the two of them together,<br>asleep in a house where my mother<br>taught herself to sleep in half a bed.</p>
+      <p>I cursed him.<br>Thoroughly,<br>with every bit of rage that fits inside one house.</p>
+      <p>They found something growing nameless<br>in Marvin's father's head.<br>It didn't let him off, but at least there was something to point at.</p>
+      <p>Some days I want that for mine,<br>something growing nameless in the dark,<br>something that accounts for the Sundays he missed,<br>for a whole house teaching itself not to wait up.</p>
+      <p>Something that eats whatever it finds,<br>that goes without a map, that can't tell well from sick,<br>that eats the part of him that hurt me<br>and leaves the other part standing,<br>the one who pushed toy cars across the floor,<br>the one who sang about the woodpecker<br>crying because he came home broke,<br>the father who was there<br>before something moved in behind his eyes<br>that wasn't all the way him.</p>
+      <p>Something nameless that lets us both go.</p>
+      <p>I'm not Marvin,<br>but I play <i>Mercy Mercy Me</i><br>and I cry.</p>
     </div>
   </div>
 </article>
@@ -232,13 +173,6 @@ body{
     </div>
   </div>
 </article>
-
-<footer class="colophon">
-  <div class="wrap">
-    <blockquote>"I'm not Marvin,<br>but I put on Mercy Mercy Me<br>and I <span>cry</span>."</blockquote>
-    <div class="sig">El Zhurdo</div>
-  </div>
-</footer>
 
 </body>
 </html>
