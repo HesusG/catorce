@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fourteen Years Apart</title>
+<meta name="description" content="Four poems written at twenty-two. Four answers written fourteen years later.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FFFFFF;
+  --ink:#15161A;
+  --slate:#6A6F7B;
+  --oxide:#A4342A;
+  --rule:rgba(21,22,26,0.13);
+  --rule-soft:rgba(21,22,26,0.07);
+  --serif:'Newsreader',Georgia,'Times New Roman',serif;
+  --display:'Fraunces','Newsreader',Georgia,serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.wrap{max-width:38rem;margin:0 auto;padding-inline:20px;}
+
+/* ---------- MASTHEAD ---------- */
+.masthead{padding-block:56px 40px;border-bottom:1px solid var(--rule);}
+.stamp{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--slate);
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px 14px;
+  margin-bottom:32px;
+}
+.stamp b{color:var(--oxide);font-weight:500;}
+.masthead h1{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:clamp(2.6rem,11vw,4.2rem);
+  line-height:0.98;
+  letter-spacing:-0.02em;
+  text-wrap:balance;
+  margin-bottom:20px;
+}
+.masthead h1 .yr{
+  display:block;
+  font-family:var(--mono);
+  font-weight:400;
+  font-size:clamp(0.8rem,3.4vw,1rem);
+  letter-spacing:0.22em;
+  color:var(--oxide);
+  margin-top:18px;
+}
+.deck{
+  font-size:1.12rem;
+  font-style:italic;
+  color:var(--slate);
+  line-height:1.6;
+  max-width:32ch;
+}
+
+/* ---------- FOREWORD ---------- */
+.foreword{padding-block:40px;border-bottom:1px solid var(--rule);}
+.foreword p{max-width:60ch;}
+.foreword p + p{margin-top:1.1em;}
+.foreword .lede::first-letter{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:3.1em;
+  float:left;
+  line-height:0.82;
+  padding:0.06em 0.09em 0 0;
+  color:var(--oxide);
+}
+
+/* ---------- PAIR ---------- */
+.pair{padding-block:52px 8px;border-bottom:1px solid var(--rule);}
+.pair-head{margin-bottom:38px;}
+.pair-n{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:2.5rem;
+  line-height:1;
+  color:var(--oxide);
+  letter-spacing:-0.01em;
+}
+.pair-note{
+  font-size:1rem;
+  font-style:italic;
+  color:var(--slate);
+  line-height:1.55;
+  max-width:44ch;
+  margin-top:10px;
+  text-wrap:pretty;
+}
+
+/* ---------- POEM ---------- */
+.poem{padding-bottom:44px;}
+.poem + .poem{
+  padding-top:40px;
+  border-top:1px solid var(--rule-soft);
+}
+.poem-rule{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--slate);
+  margin-bottom:18px;
+}
+.poem-rule::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:var(--rule);
+}
+.poem--answer .poem-rule{color:var(--oxide);}
+.poem--answer .poem-rule::after{background:var(--oxide);opacity:0.32;}
+.poem h2{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:clamp(1.5rem,6vw,1.95rem);
+  line-height:1.12;
+  letter-spacing:-0.015em;
+  text-wrap:balance;
+  margin-bottom:6px;
+}
+.poem h2 .orig{
+  display:block;
+  font-family:var(--serif);
+  font-weight:400;
+  font-style:italic;
+  font-size:0.56em;
+  letter-spacing:0;
+  color:var(--slate);
+  margin-top:7px;
+}
+.body{margin-top:26px;font-size:1.06rem;line-height:1.85;}
+.body p{text-wrap:pretty;}
+.body p + p{margin-top:1.35em;}
+.body .sec{
+  display:block;
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:0.16em;
+  color:var(--oxide);
+  margin-bottom:0.9em;
+}
+.body em{font-style:italic;color:var(--oxide);}
+
+/* grounding exercise — set as clinical instruction, not verse */
+.body .spiral{
+  color:var(--slate);
+  font-style:italic;
+  padding-block:16px;
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  margin-block:1.5em;
+}
+.anchor{
+  display:block;
+  font-family:var(--mono);
+  font-style:normal;
+  font-size:0.8rem;
+  line-height:1.7;
+  letter-spacing:0.02em;
+  color:var(--oxide);
+  border:1px solid rgba(164,52,42,0.34);
+  padding:10px 12px;
+  margin-top:1.4em;
+}
+
+/* case note */
+.note{
+  border-left:2px solid var(--oxide);
+  padding:14px 16px;
+  margin-top:22px;
+  background:rgba(164,52,42,0.045);
+  font-family:var(--mono);
+  font-size:0.78rem;
+  line-height:1.75;
+  color:var(--slate);
+}
+.note b{color:var(--ink);font-weight:500;}
+
+/* ---------- COLOPHON ---------- */
+.colophon{padding-block:52px 72px;}
+.colophon blockquote{
+  font-size:1.3rem;
+  font-style:italic;
+  line-height:1.5;
+  max-width:28ch;
+  text-wrap:balance;
+  margin-bottom:26px;
+}
+.colophon blockquote span{color:var(--oxide);}
+.ledger{
+  font-family:var(--mono);
+  font-size:0.72rem;
+  line-height:1.4;
+  letter-spacing:0.02em;
+  color:var(--slate);
+  border-top:1px solid var(--rule);
+  padding-top:18px;
+  display:grid;
+  gap:9px;
+}
+.ledger div{display:flex;justify-content:space-between;gap:16px;}
+.ledger dt{text-transform:uppercase;letter-spacing:0.1em;}
+.ledger dd{color:var(--ink);font-variant-numeric:tabular-nums;text-align:right;}
+
+@media(min-width:44rem){
+  body{font-size:18px;}
+  .masthead{padding-block:84px 52px;}
+  .pair{padding-block:68px 8px;}
+  .body{font-size:1.1rem;}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="stamp"><span>Puebla, Mexico</span><span>·</span><span>El Zhurdo</span><span>·</span><span><b>Eight poems</b></span></div>
+    <h1>Fourteen Years Apart<span class="yr">2011 &mdash; 2025</span></h1>
+    <p class="deck">Four poems written at twenty-two. Four answers written fourteen years later. The same voice, twice.</p>
+  </div>
+</header>
+
+<section class="foreword">
+  <div class="wrap">
+    <p class="lede">In 2011, at twenty-two, I wrote four poems under the name El Zhurdo. They won a competition. I hadn't written them to win.</p>
+    <p>In 2025 I read them again. Four answers came out, unplanned. They aren't corrections. They're what the same person would say fourteen years later, in a different body and the same language.</p>
+  </div>
+</section>
+
+<!-- I -->
+<section class="pair">
+  <div class="wrap">
+    <div class="pair-head">
+      <div class="pair-n">I</div>
+      <p class="pair-note">The only 2011 poem that needed no revising. Its answer is the longest thing in the file.</p>
+    </div>
+
+    <article class="poem">
+      <div class="poem-rule">2011</div>
+      <h2>Larva</h2>
+      <div class="body">
+        <p>Begin already naked.<br>Don't die inside your shelter.<br>Don't feel what we believe is foreign.<br>Don't exist without the world,<br>even if the world exists without you.</p>
+        <p>To feel ourselves distant from a tear<br>that plants manias of love between fits of laughter,<br>manias endless, lit<br>even in the most shuttered eyes.</p>
+        <p>We are like rivers that don't know<br>they're headed for the sea,<br>that don't know that loving<br>wasn't waiting for them either.</p>
+        <p>We walk stumbling, in a hurry,<br>on hunches that ask no permission<br>to lose themselves in another language,<br>one that doesn't know your name yet,<br>we walk,<br>feeling the warmth of your eyes<br>in mine.</p>
+      </div>
+    </article>
+
+    <article class="poem poem--answer">
+      <div class="poem-rule">2025 &nbsp;·&nbsp; answer</div>
+      <h2>Cramps in the Soul<span class="orig">Calambres en el alma</span></h2>
+      <div class="body">
+        <p>everyone's carrying their own trip in their head</p>
+        <p>the psychiatrist said on the first visit:<br><em>write it down: fluoxetine,<br>what you feel has a name,<br>and you're not the first</em></p>
+        <p>he prescribed it without asking me anything,<br>like someone signing something<br>without reading what they sign,<br>and there I was,<br>at the mercy of his rush,<br>his next patient,<br>his laziness about knowing me.</p>
+        <p>he was right about the one thing he refused to know,<br>that what I have has a name,<br>a name nobody claimed,<br>that was left without a mouth,</p>
+        <p>and so I learned to wait,<br>measuring time by doors that take too long,<br>by people who come in and don't come back the same,<br>by the exact distance between a name<br>and what a name sometimes withholds.</p>
+        <p>something came back one night<br>smelling of alcohol and of swallowing the city whole,<br>it carried my last name,<br>and a face that was a map<br>of everything Mexico City does<br>when you embrace the demons of desire.<br>maniacal maneuver</p>
+        <p>like light that adores its own straying,<br>sometimes I don't know if I'm the one walking<br>or someone watching himself live<br>a second after living it,</p>
+        <p>and sometimes I just wait for a Sunday,<br>one stupid Sunday to calm me down.</p>
+        <p class="spiral">a splinter in my finger<br>I ignore it<br>it digs in<br>it reaches the veins<br>the world shrinks<br>just the grooves in the skin of my fingers<br>turning into enormous<br>walls<br>eating me<span class="anchor">[ hey, your feet, the floor ]<br>[ breathe, come back ]</span></p>
+        <p>I know exactly what it feels like when everything spins out of control.<br>Not from the outside. From the inside.</p>
+        <p>for this ruined body,<br>for this paper mirror<br>that goes damp before it tears,<br>I'm sorry for being here<br>before anyone asks me to.</p>
+        <p>but sometimes I think I can function,<br>not well,<br>but the way something badly made still works anyway,<br>like a scribble that from far away looks like a figure,<br>like a puzzle where I forced the pieces<br>and it came out crooked but complete,</p>
+        <p>and even so<br>here I am,<br>defeated<br>but knowing I'm defeated,<br>which is not the same thing.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- II -->
+<section class="pair">
+  <div class="wrap">
+    <div class="pair-head">
+      <div class="pair-n">II</div>
+      <p class="pair-note">The 2011 poem looks outward for its references. The 2025 one needs none, except one.</p>
+    </div>
+
+    <article class="poem">
+      <div class="poem-rule">2011</div>
+      <h2>Poem for Carrington<span class="orig">Poema a Carrington</span></h2>
+      <div class="body">
+        <p>At the start of this account there was a feeling,<br>again, and there was a topology of fear,<br>of open tears, the x-ray of wind<br>leaving its flesh, fear turning into form.</p>
+        <p>Because of the painting of the raging bull,<br>the beast that was a girl on a bicycle<br>and at the same time was her vast, infinite lover.</p>
+        <p>After all, the dream is sick,<br>its shoulders loose, the brushstrokes of the wind's bride;<br>wings.</p>
+        <p>According to Oskar, his disorder needs a homomorphism;<br>though Lucrecio argues for the poem's own destruction:<br>the fact that the author himself becomes the poem,<br>existing only in his poetry, nothing more than his voice.</p>
+      </div>
+    </article>
+
+    <article class="poem poem--answer">
+      <div class="poem-rule">2025 &nbsp;·&nbsp; answer</div>
+      <h2>Poem for Marvin<span class="orig">Mercy Mercy Me</span></h2>
+      <div class="note">
+        <p><b>Marvin Gaye</b> (1939&ndash;1984), Motown's "Prince of Soul," known for <i>What's Going On</i> and <i>Mercy Mercy Me</i>. His father, a Pentecostal minister, was violent and distant throughout his life. On April 1, 1984, one day before Marvin's 45th birthday, his father shot and killed him during an argument. Gay Sr. was later found to have a brain tumor.</p>
+      </div>
+      <div class="body">
+        <p>I'd want to offer you my heart with an open hand<br>wanting nothing back,<br>the way Marvin sang to the world that was destroying him.</p>
+        <p>But I carry things.</p>
+        <p>My father weighs in a way you can't see,<br>like a song you know<br>but can't play at any party.</p>
+        <p>I hid him in the silence of Sundays,<br>at the table where no one passed anything hand to hand.</p>
+        <p>There was an imagined time<br>where his voice didn't arrive cold,<br>where the father's hands knew the difference<br>between holding and drowning.</p>
+        <p>Marvin's father's hands didn't know it either.</p>
+        <p>So we're even.<br>That's all.<br>Like astronauts who lost the line<br>and no longer know if the other is still there<br>or has spent years drifting alone in the dark.</p>
+        <p>There was no goodbye.<br>There was a telephone, its long dial tone,<br>the exact silence before hanging up.</p>
+        <p>I stayed in that silence a long time,<br>with the hatred well kept,<br>with the loneliness turning slowly<br>like a record no one put on but that plays anyway,<br>and then both things together<br>sleeping in a house where my mother<br>learned to sleep in half a bed.</p>
+        <p>I cursed him.<br>For years, in detail,<br>with all the rage that fits in that same house.</p>
+        <p>They found something growing nameless<br>in Marvin's father's head.<br>That didn't absolve him, but there was something to point to.</p>
+        <p>Sometimes I wish that for mine,<br>something that grows nameless in the dark,<br>that explains the Sundays without him,<br>the Christmases where the work arrived on time and he didn't,<br>the whole house learning not to wait for him.</p>
+        <p>Something that eats whatever it finds,<br>that moves without a map, that can't tell healthy from sick,<br>that eats what hurt me<br>and leaves the other one intact,<br>the one who pushed toy cars along the floor,<br>the one who sang about the woodpecker<br>who cried because he brought no money,<br>the father who existed<br>before something came to live inside him<br>that wasn't entirely him.</p>
+        <p>Something nameless that frees us both.</p>
+        <p>I'm not Marvin,<br>but I put on <i>Mercy Mercy Me</i><br>and I cry.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- III -->
+<section class="pair">
+  <div class="wrap">
+    <div class="pair-head">
+      <div class="pair-n">III</div>
+      <p class="pair-note">The 2011 poem denied that the pain had a name. The 2025 one already knows what it is.</p>
+    </div>
+
+    <article class="poem">
+      <div class="poem-rule">2011</div>
+      <h2>What Hurts<span class="orig">Lo que duele</span></h2>
+      <div class="body">
+        <p>What hurts isn't the chest,<br>isn't hunger, nor the open wound,<br>not the muscles, nor the body<br>silencing its own language.</p>
+        <p>The bone that gives doesn't hurt,<br>the edge of time<br>entering uninvited doesn't hurt,<br>what bleeds doesn't hurt.</p>
+        <p>What hurts has no name in the body<br>but lives there,<br>stitched to the ribs,<br>keeping the rhythm without being asked.</p>
+        <p>What hurts runs as deep<br>as the quiet pleasure of being naked.</p>
+      </div>
+    </article>
+
+    <article class="poem poem--answer">
+      <div class="poem-rule">2025 &nbsp;·&nbsp; answer</div>
+      <h2>What Hurts<span class="orig">Lo que duele</span></h2>
+      <div class="body">
+        <p>What hurts does have a name.<br>It has a time: three in the morning.<br>It has a place: the empty side of the bed.<br>It has someone to blame,<br>though blame relieves nothing.</p>
+        <p>The bone that learned not to give in hurts,<br>the body that keeps watch<br>over what already passed but never left.</p>
+        <p>What hurts comes with a prescription,<br>twenty milligrams, forty if that's not enough,<br>and even named, even prescribed,<br>it hurts just the same.</p>
+        <p>What hurts is as intimate<br>as the fear of sleeping alone<br>in a house that learned to go quiet.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- IV -->
+<section class="pair">
+  <div class="wrap">
+    <div class="pair-head">
+      <div class="pair-n">IV</div>
+      <p class="pair-note">The 2011 poem devours another body. The 2025 one devours itself.</p>
+    </div>
+
+    <article class="poem">
+      <div class="poem-rule">2011</div>
+      <h2>Pupa</h2>
+      <div class="body">
+        <p><span class="sec">I</span>We clear the snow from your bed,<br>we lace our fingers together,<br>we lace our tongues and our veins.<br>Wrapping ourselves in a blanket of warm blood,<br>one single thing.<br>One single thing: the border between animal and human.<br>Your howls dug into my neck,<br>with claws, fangs, and sharpened nails<br>we tore the skin &mdash;</p>
+        <p><span class="sec">II</span>Instinctive nymph,<br>you barely hesitate weaving your love out of lamplight.<br>Also Maniac.<br>Cannibal of memories.<br>Infamous poet.</p>
+        <p>You go still when the sigh carries the fire away,<br>we throw ourselves at death.<br>Sin doesn't make you scandal or catastrophe.<br>And maybe my body will burst.<br>Look at me now: your poorly made apprentice.</p>
+        <p>I'll be whatever you want.<br>The incurable mania that makes your steps light.<br>Your bones clenched, clenching.</p>
+      </div>
+    </article>
+
+    <article class="poem poem--answer">
+      <div class="poem-rule">2025 &nbsp;·&nbsp; answer</div>
+      <h2>Pupa</h2>
+      <div class="body">
+        <p><span class="sec">I</span>I clear the sheets from my own bed,<br>lace my fingers around nothing,<br>lace my tongue around a name I won't say.<br>I wrap myself alone in a blanket of cold sweat,<br>one single thing,<br>one single thing: the border between body and attack.<br>My own teeth dig into my neck,<br>with nails, with doubt, with what I didn't say,<br>I tear my own skin &mdash;</p>
+        <p><span class="sec">II</span>Nymph fleeing herself,<br>barely hesitating as she weaves her sentence out of fear.<br>Also maniac.<br>Cannibal of her own memories.<br>Infamous patient.</p>
+        <p>I go still when my chest carries the air away,<br>I throw myself at nothing.<br>Panic doesn't make me scandal or catastrophe,<br>just a body that believes it's about to burst.<br>Look at me now: a poorly made survivor.</p>
+        <p>I'll be whatever the fear wants.<br>The incurable mania that makes my steps heavy.<br>My bones clenched, clenching.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer class="colophon">
+  <div class="wrap">
+    <blockquote>"What hurts runs as deep<br>as the quiet pleasure<br>of being <span>naked</span>."</blockquote>
+    <dl class="ledger">
+      <div><dt>Pen name</dt><dd>El Zhurdo</dd></div>
+      <div><dt>Pairs complete</dt><dd>4 / 4</dd></div>
+      <div><dt>Years between</dt><dd>14</dd></div>
+      <div><dt>Voice lost</dt><dd>No</dd></div>
+    </dl>
+  </div>
+</footer>
+
+</body>
+</html>
