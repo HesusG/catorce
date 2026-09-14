@@ -63,7 +63,7 @@ body{
   margin-bottom:20px;
 }
 .body{margin-top:28px;font-size:1.06rem;line-height:1.85;}
-.body p{text-wrap:pretty;max-width:min(62ch,100%);}
+.body p{text-wrap:pretty;max-width:100%;overflow-wrap:break-word;}
 .body p + p{margin-top:1.35em;}
 .body em{font-style:italic;color:var(--oxide);}
 
@@ -100,7 +100,37 @@ body{
   line-height:1.75;
   color:var(--slate);
 }
+.note p{max-width:100%;overflow-wrap:break-word;}
 .note b{color:var(--ink);font-weight:500;}
+
+/* ---------- VERSION TOGGLE ---------- */
+.switch{
+  display:flex;
+  gap:0;
+  margin-top:24px;
+  border:1px solid var(--rule);
+  width:fit-content;
+  max-width:100%;
+}
+.switch button{
+  font-family:var(--mono);
+  font-size:0.68rem;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--slate);
+  background:none;
+  border:none;
+  padding:9px 14px;
+  cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+}
+.switch button + button{border-left:1px solid var(--rule);}
+.switch button[aria-pressed="true"]{background:var(--oxide);color:var(--paper);}
+.switch button:focus-visible{outline:2px solid var(--oxide);outline-offset:2px;}
+.prose p + p{margin-top:1.15em;}
+.lit{display:none;}
+.poem.show-lit .prose{display:none;}
+.poem.show-lit .lit{display:block;}
 
 @media(min-width:44rem){
   body{font-size:18px;}
@@ -121,7 +151,21 @@ body{
     <div class="note">
       <p><b>Marvin Gaye</b>, Motown's "Prince of Soul," known for <i>What's Going On</i> and <i>Mercy Mercy Me</i>. His father, a Pentecostal minister, was violent and distant throughout his life. His father shot and killed him during an argument. Gay Sr. was later found to have a brain tumor.</p>
     </div>
-    <div class="body">
+    <div class="switch">
+      <button type="button" aria-pressed="true" onclick="setVersion(this,false)">Prose</button>
+      <button type="button" aria-pressed="false" onclick="setVersion(this,true)">Literal</button>
+    </div>
+    <div class="body prose">
+      <p>I want to hand you my heart open-palmed and ask nothing back, the way Marvin sang to the world that was killing him. But I can't. I carry things.</p>
+      <p>My father weighs something you can't see. He's a song I know every word of and can't play at a party. So I kept him in the quiet of Sundays, at a table where nobody ever handed anybody anything.</p>
+      <p>I used to invent a version of him whose voice didn't come in cold, whose hands knew the difference between holding you and holding you under. Marvin's father's hands didn't know it either. That's the whole inheritance: two men who never learned the difference, and the two of us who found out.</p>
+      <p>So we're square. There was no goodbye — there was a phone, the long tone in it, that exact silence before somebody hangs up. After that, two astronauts who lost the line, neither one sure the other is still out there or has been drifting alone in the dark for years.</p>
+      <p>I stayed in that silence a long time, the hate put away somewhere safe, the loneliness turning slow like a record nobody put on that plays anyway, and eventually the two of them lay down together in a house where my mother taught herself to sleep in half a bed. I cursed him. For years, thoroughly, with every bit of rage one house can hold.</p>
+      <p>They found something growing nameless in Marvin's father's head. It didn't let him off, but at least there was something to point at. Some days I want that for mine — something growing nameless in the dark, something that would account for the Sundays he missed, the Christmases where the work showed up on time and he didn't, a whole house teaching itself not to wait up. Something that eats whatever it finds, that goes without a map, that can't tell well from sick. Let it eat the part of him that hurt me and leave the other part standing: the one who pushed toy cars across the floor, the one who sang about the woodpecker who cried because he came home broke, the father who was there before something moved in behind his eyes that wasn't all the way him.</p>
+      <p>Something nameless that lets us both go.</p>
+      <p>I'm not Marvin. But I play <i>Mercy Mercy Me</i> and I cry.</p>
+    </div>
+    <div class="body lit">
       <p>I want to hand you my heart open-palmed<br>and ask nothing back,<br>the way Marvin sang to the world that was killing him.</p>
       <p>But I carry things.</p>
       <p>My father weighs something you can't see,<br>like a song you know by heart<br>and can't play at a party.</p>
@@ -173,6 +217,16 @@ body{
     </div>
   </div>
 </article>
+
+<script>
+function setVersion(btn,literal){
+  var poem=btn.closest('.poem');
+  poem.classList.toggle('show-lit',literal);
+  var btns=poem.querySelectorAll('.switch button');
+  btns[0].setAttribute('aria-pressed',String(!literal));
+  btns[1].setAttribute('aria-pressed',String(literal));
+}
+</script>
 
 </body>
 </html>
